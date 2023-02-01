@@ -8,13 +8,12 @@ public class startGUI extends JFrame{
 
     public startGUI(){
         setTitle("masproject");
-
-        JPanel Jpanel = new JPanel();
-        JButton startBtn = new JButton("게임 시작"); //시작 버튼
-        JButton howPlayBtn = new JButton("게임 방법"); //게임 방법 안내 버튼
-
         setSize(1500, 850);
         setBackground(Color.WHITE);
+
+        JPanel Jp = new JPanel();
+        JButton startBtn = new JButton("게임 시작"); //시작 버튼
+        JButton howPlayBtn = new JButton("게임 방법"); //게임 방법 안내 버튼
 
         startBtn.setContentAreaFilled(false);
         startBtn.setFocusPainted(false);
@@ -23,14 +22,14 @@ public class startGUI extends JFrame{
         howPlayBtn.setFocusPainted(false);
 
         startBtn.setPreferredSize(new Dimension(170, 120));
-        startBtn.setBounds(550, 530, 170, 120);
+        startBtn.setBounds(550, 630, 170, 120);
 
         howPlayBtn.setPreferredSize(new Dimension(170, 120));
-        howPlayBtn.setBounds(750, 530, 170, 120);
+        howPlayBtn.setBounds(750, 630, 170, 120);
 
-        Jpanel.add(startBtn);
-        Jpanel.add(howPlayBtn);
-        add(Jpanel);
+        add(startBtn);
+        add(howPlayBtn);
+        add(Jp);
 
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
