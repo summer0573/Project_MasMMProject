@@ -20,7 +20,7 @@ public class howPlayGUI extends JFrame {
         Jp.setLayout(new BorderLayout());
 
         Jl.setFont(Jl.getFont().deriveFont(30.0f));
-        Jl.setBounds(500, 200, 500, 250);
+        Jl.setBounds(400, 200, 700, 250);
 //        Jl.setHorizontalAlignment(JLabel.CENTER);
 
 
