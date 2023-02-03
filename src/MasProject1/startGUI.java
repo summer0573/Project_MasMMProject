@@ -2,11 +2,12 @@ package MasProject1;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 import javax.swing.*;
 
 public class startGUI extends JFrame{
 //처음 시작 화면
-    public startGUI(){
+    public startGUI() throws SQLException {
         setTitle("masproject");
         setSize(1500, 850);
         setBackground(Color.WHITE);
@@ -52,7 +53,7 @@ public class startGUI extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         new startGUI();
     }
 }
