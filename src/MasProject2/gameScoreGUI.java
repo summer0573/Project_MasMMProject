@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class gameScoreGUI extends JFrame{
+    //게임 점수 화면
     public gameScoreGUI(){
         setTitle("masproject");
         setSize(1500, 850);

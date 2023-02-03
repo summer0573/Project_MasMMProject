@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class howPlayGUI extends JFrame {
-
+//게임 방법 설명 화면
     public howPlayGUI() {
         setTitle("masproject");
         setSize(1500, 850);

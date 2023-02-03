@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class startGUI extends JFrame{
-
+//처음 시작 화면
     public startGUI(){
         setTitle("masproject");
         setSize(1500, 850);
@@ -35,7 +35,7 @@ public class startGUI extends JFrame{
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
-        startBtn.addActionListener(new ActionListener() {
+        startBtn.addActionListener(new ActionListener() { //게임 시작 이벤트
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Frame();
@@ -43,7 +43,7 @@ public class startGUI extends JFrame{
             }
         });
 
-        howPlayBtn.addActionListener(new ActionListener() {
+        howPlayBtn.addActionListener(new ActionListener() { //게임 방법 이벤트
             @Override
             public void actionPerformed(ActionEvent e) {
                 new howPlayGUI();
