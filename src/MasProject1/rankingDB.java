@@ -10,8 +10,9 @@ public class rankingDB {
         String userName = "root";
         String password = "@summer0573";
 
-        String difficulty = "4단계";
+
         String name = "??";
+        String diff = "4단계";
         int score = 6;
 
         try {
@@ -19,20 +20,8 @@ public class rankingDB {
             Connection connection = DriverManager.getConnection(url, userName, password);
             Statement stmt = connection.createStatement();
 
-            switch (difficulty) {
-                case "1단계":
-                    stmt.executeUpdate(" INSERT INTO diffi1_table(name, score)  VALUES ('" + name + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-                    break;
-                case "2단계":
-                    stmt.executeUpdate(" INSERT INTO diffi2_table(name, score)  VALUES ('" + name + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-                    break;
-                case "3단계":
-                    stmt.executeUpdate(" INSERT INTO diffi3_table(name, score)  VALUES ('" + name + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-                    break;
-                case "4단계":
-                    stmt.executeUpdate(" INSERT INTO diffi4_table(name, score)  VALUES ('" + name + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-                    break;
-            }
+            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
+
 
         } catch (SQLException e) {
             System.out.println(e);
