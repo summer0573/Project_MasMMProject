@@ -26,6 +26,17 @@ public class rankingDB {
         } catch (SQLException e) {
             System.out.println(e);
         }
+
+        /*
+        jlabel로 점수 데이터 확인하기
+        아니면 dialog로 새창 띄우기
+
+        게임 내에서 이름, 단계, 데이터 받고
+        테이블에 저장한 다음
+        점수 화면에 띄우고
+        시작창에 최신순으로 띄우기
+        */
+
         /*
         int num=1;
         try {
