@@ -10,10 +10,10 @@ public class rankingDB {
         String userName = "root";
         String password = "@summer0573";
 
-
-        String name = "??";
-        String diff = "4단계";
-        int score = 6;
+        //****88임시 데이터
+        String name = "??"; //플레이어 닉네임
+        String diff = "4단계"; //플레이어가 선택한 난이도
+        int score = 6; //플레이어가 문제를 맞춘 갯수
 
         try {
 //데이터베이스불러오기
