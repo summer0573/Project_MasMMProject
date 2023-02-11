@@ -1,6 +1,9 @@
 package MasProject1;
 
 import java.sql.*;
+import test.test1;
+import test.test2;
+import test.test3;
 import test.test4;
 
 public class rankingDB {
@@ -63,14 +66,21 @@ public class rankingDB {
 
     public static void main(String[] args) throws SQLException {
 //        new rankingDB();
+        test1 t1 = new test1();
+//        new test2();
+//        new test3();
+
         test4 t4 = new test4();
+        t4.name = "aa";
+        t1.test = t4.name;
 
-        String name = t4.getName();
-        String diff = t4.getDiff();
-        int score = t4.getScore();
+//        String name = t4.getName();
+//        String diff = t4.getDiff();
+//        int score = t4.getScore();
 
-        System.out.println(name);
-        System.out.println(diff);
-        System.out.println(score);
+        System.out.println(t4.name);
+        System.out.println(t1.test);
+//        System.out.println(diff);
+//        System.out.println(score);
     }
 }
