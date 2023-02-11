@@ -1,31 +1,32 @@
 package MasProject1;
 
 import java.sql.*;
+import test.test4;
 
 public class rankingDB {
 
     public rankingDB() throws SQLException {
-
-        String url = "jdbc:mysql://localhost:3306/MasMMProject";
-        String userName = "root";
-        String password = "@summer0573";
-
-        //****88임시 데이터
-        String name = "??"; //플레이어 닉네임
-        String diff = "4단계"; //플레이어가 선택한 난이도
-        int score = 6; //플레이어가 문제를 맞춘 갯수
-
-        try {
-//데이터베이스불러오기
-            Connection connection = DriverManager.getConnection(url, userName, password);
-            Statement stmt = connection.createStatement();
-
-            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-
-
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
+//
+//        String url = "jdbc:mysql://localhost:3306/MasMMProject";
+//        String userName = "root";
+//        String password = "@summer0573";
+//
+//        //****88임시 데이터
+//        String name = "??"; //플레이어 닉네임
+//        String diff = "4단계"; //플레이어가 선택한 난이도
+//        int score = 6; //플레이어가 문제를 맞춘 갯수
+//
+//        try {
+////데이터베이스불러오기
+//            Connection connection = DriverManager.getConnection(url, userName, password);
+//            Statement stmt = connection.createStatement();
+//
+//            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
+//
+//
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
 
         /*
         jlabel로 점수 데이터 확인하기
@@ -61,6 +62,15 @@ public class rankingDB {
     }
 
     public static void main(String[] args) throws SQLException {
-        new rankingDB();
+//        new rankingDB();
+        test4 t4 = new test4();
+
+        String name = t4.getName();
+        String diff = t4.getDiff();
+        int score = t4.getScore();
+
+        System.out.println(name);
+        System.out.println(diff);
+        System.out.println(score);
     }
 }
