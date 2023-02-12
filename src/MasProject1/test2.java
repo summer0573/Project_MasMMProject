@@ -11,7 +11,7 @@ public class test2 {
         T2 = T.getT();
 
     }
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         new test2();
     }
 }

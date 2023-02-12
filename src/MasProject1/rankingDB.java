@@ -1,36 +1,40 @@
 package MasProject1;
 
 import java.sql.*;
-
+import MasProject2.*;
 
 public class rankingDB {
+
+    public String userScore;
 
     public rankingDB() throws SQLException {
         test2 TT = new test2();
         int DT = TT.T2;
 
-
-
         String url = "jdbc:mysql://localhost:3306/MasMMProject";
         String userName = "root";
         String password = "@summer0573";
 
-        //****88임시 데이터
-        String name = "??"; //플레이어 닉네임
-        String diff = "4단계"; //플레이어가 선택한 난이도
-        int score = 6; //플레이어가 문제를 맞춘 갯수
+        //****임시 데이터
+        String name = "테스트"; //플레이어 닉네임
+        String diff = "2단계"; //플레이어가 선택한 난이도
+        int score = 5; //플레이어가 문제를 맞춘 갯수
+        
+        scoreDateSG DSG = new scoreDateSG();
+        DSG.setUserDT(String.valueOf(score));
+        userScore = DSG.getUserDT();
 
-        try {
-//데이터베이스불러오기
-            Connection connection = DriverManager.getConnection(url, userName, password);
-            Statement stmt = connection.createStatement();
-
-            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + DT + "')");//테이블에 스코어를 추가 시키는 큐리문
-
-
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
+//        try {
+////데이터베이스불러오기
+//            Connection connection = DriverManager.getConnection(url, userName, password);
+//            Statement stmt = connection.createStatement();
+//
+//            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
+//
+//
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
 
         /*
         jlabel로 점수 데이터 확인하기
@@ -63,6 +67,9 @@ public class rankingDB {
         dialog.setVisible(true);
     }
         * */
+
+
+
     }
 
     public static void main(String[] args) throws SQLException {

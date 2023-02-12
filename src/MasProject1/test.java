@@ -13,7 +13,7 @@ public class test {
         return t;
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         new test();
     }
 }
