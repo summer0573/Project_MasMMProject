@@ -3,9 +3,9 @@ package MasProject2;
 import java.awt.*;
 import javax.swing.*;
 
-public class gameScoreGUI extends JFrame{
+public class gameScoreDialog extends JFrame{
     //게임 점수 화면
-    public gameScoreGUI(){
+    public gameScoreDialog(){
         setTitle("masproject");
         setSize(1500, 850);
         setBackground(Color.WHITE);
@@ -20,6 +20,6 @@ public class gameScoreGUI extends JFrame{
     }
 
     public static void main(String[] args) {
-        new gameScoreGUI();
+        new gameScoreDialog();
     }
 }

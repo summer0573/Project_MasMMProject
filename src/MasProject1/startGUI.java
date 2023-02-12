@@ -4,10 +4,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
+import MasProject2.gameScoreDialog;
 
 public class startGUI extends JFrame{
 //처음 시작 화면
-    public startGUI() throws SQLException {
+    public startGUI() {
         setTitle("masproject");
         setSize(1500, 850);
         setBackground(Color.WHITE);

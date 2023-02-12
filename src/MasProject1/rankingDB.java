@@ -1,35 +1,36 @@
 package MasProject1;
 
 import java.sql.*;
-import test.test1;
-import test.test2;
-import test.test3;
-import test.test4;
+
 
 public class rankingDB {
 
     public rankingDB() throws SQLException {
-//
-//        String url = "jdbc:mysql://localhost:3306/MasMMProject";
-//        String userName = "root";
-//        String password = "@summer0573";
-//
-//        //****88임시 데이터
-//        String name = "??"; //플레이어 닉네임
-//        String diff = "4단계"; //플레이어가 선택한 난이도
-//        int score = 6; //플레이어가 문제를 맞춘 갯수
-//
-//        try {
-////데이터베이스불러오기
-//            Connection connection = DriverManager.getConnection(url, userName, password);
-//            Statement stmt = connection.createStatement();
-//
-//            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-//
-//
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//        }
+        test2 TT = new test2();
+        int DT = TT.T2;
+
+
+
+        String url = "jdbc:mysql://localhost:3306/MasMMProject";
+        String userName = "root";
+        String password = "@summer0573";
+
+        //****88임시 데이터
+        String name = "??"; //플레이어 닉네임
+        String diff = "4단계"; //플레이어가 선택한 난이도
+        int score = 6; //플레이어가 문제를 맞춘 갯수
+
+        try {
+//데이터베이스불러오기
+            Connection connection = DriverManager.getConnection(url, userName, password);
+            Statement stmt = connection.createStatement();
+
+            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + DT + "')");//테이블에 스코어를 추가 시키는 큐리문
+
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
 
         /*
         jlabel로 점수 데이터 확인하기
@@ -65,22 +66,6 @@ public class rankingDB {
     }
 
     public static void main(String[] args) throws SQLException {
-//        new rankingDB();
-        test1 t1 = new test1();
-//        new test2();
-//        new test3();
-
-        test4 t4 = new test4();
-        t4.name = "aa";
-        t1.test = t4.name;
-
-//        String name = t4.getName();
-//        String diff = t4.getDiff();
-//        int score = t4.getScore();
-
-        System.out.println(t4.name);
-        System.out.println(t1.test);
-//        System.out.println(diff);
-//        System.out.println(score);
+        new rankingDB();
     }
 }
