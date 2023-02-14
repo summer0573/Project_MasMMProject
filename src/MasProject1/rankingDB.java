@@ -16,9 +16,9 @@ public class rankingDB {
         String password = "@summer0573";
 
         //****임시 데이터
-        String name = "테스트"; //플레이어 닉네임
+        String name = "김마스"; //플레이어 닉네임
         String diff = "2단계"; //플레이어가 선택한 난이도
-        int score = 5; //플레이어가 문제를 맞춘 갯수
+        int score = 10; //플레이어가 문제를 맞춘 갯수
         
         scoreDateSG DSG = new scoreDateSG();
         DSG.setUserDT(String.valueOf(score));
@@ -36,7 +36,7 @@ public class rankingDB {
 //            System.out.println(e);
 //        }
 
-        /*
+        /*TRUNCATE
         jlabel로 점수 데이터 확인하기
         아니면 dialog로 새창 띄우기
 

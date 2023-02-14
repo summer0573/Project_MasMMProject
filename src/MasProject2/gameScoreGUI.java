@@ -24,7 +24,7 @@ public class gameScoreGUI extends JFrame{
                 "</body></html>");
 
         Jl.setFont(Jl.getFont().deriveFont(30.0f));
-        Jl.setBounds(400, 200, 700, 250);
+        Jl.setBounds(590, 250, 350, 250);
 
         add(Jl);
         add(Jp);
