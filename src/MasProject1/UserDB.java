@@ -3,11 +3,11 @@ package MasProject1;
 import java.sql.*;
 import MasProject2.*;
 
-public class rankingDB {
+public class UserDB {
 
     public String userScore;
 
-    public rankingDB() throws SQLException {
+    public UserDB() throws SQLException {
         test2 TT = new test2();
         int DT = TT.T2;
 
@@ -16,9 +16,9 @@ public class rankingDB {
         String password = "@summer0573";
 
         //****임시 데이터
-        String name = "김마스"; //플레이어 닉네임
-        String diff = "2단계"; //플레이어가 선택한 난이도
-        int score = 10; //플레이어가 문제를 맞춘 갯수
+        String name = "홍길동"; //플레이어 닉네임
+        String diff = "4단계"; //플레이어가 선택한 난이도
+        int score = 5; //플레이어가 문제를 맞춘 갯수
         
         scoreDateSG DSG = new scoreDateSG();
         DSG.setUserDT(String.valueOf(score));
@@ -73,6 +73,6 @@ public class rankingDB {
     }
 
     public static void main(String[] args) throws SQLException {
-        new rankingDB();
+        new UserDB();
     }
 }

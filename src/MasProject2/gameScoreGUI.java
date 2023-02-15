@@ -9,7 +9,7 @@ public class gameScoreGUI extends JFrame{
 
     //게임 점수 화면
     public gameScoreGUI() throws SQLException {
-        rankingDB RD = new rankingDB();
+        UserDB RD = new UserDB();
         String userScoreData = RD.userScore;
 
         setTitle("masproject");
