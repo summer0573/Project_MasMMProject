@@ -7,7 +7,7 @@ public class UserDB {
 
     public String userScore;
 
-    public UserDB() throws SQLException {
+    public UserDB() {
         test2 TT = new test2();
         int DT = TT.T2;
 
@@ -16,9 +16,9 @@ public class UserDB {
         String password = "@summer0573";
 
         //****임시 데이터
-        String name = "ddd"; //플레이어 닉네임
-        String diff = "3단계"; //플레이어가 선택한 난이도
-        int score = 1; //플레이어가 문제를 맞춘 갯수
+        String name = "드디어"; //플레이어 닉네임
+        String diff = "1단계"; //플레이어가 선택한 난이도
+        int score = 2; //플레이어가 문제를 맞춘 갯수
         ///
         
         scoreDateSG DSG = new scoreDateSG();

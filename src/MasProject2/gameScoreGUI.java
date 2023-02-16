@@ -13,7 +13,7 @@ public class gameScoreGUI extends JFrame{
         String userScoreData = RD.userScore;
 
         setTitle("masproject");
-        setSize(1500, 850);
+        setSize(840, 720);
         setBackground(Color.WHITE);
 
         System.out.println(userScoreData);
@@ -24,7 +24,7 @@ public class gameScoreGUI extends JFrame{
                 "</body></html>");
 
         Jl.setFont(Jl.getFont().deriveFont(30.0f));
-        Jl.setBounds(590, 250, 350, 250);
+        Jl.setBounds(280, 200, 350, 250);
 
         add(Jl);
         add(Jp);

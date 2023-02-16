@@ -8,7 +8,7 @@ public class howPlayGUI extends JFrame {
 //게임 방법 설명 화면
     public howPlayGUI() {
         setTitle("masproject");
-        setSize(1500, 850);
+        setSize(840, 720);
         setBackground(Color.WHITE);
 
         JPanel Jp = new JPanel();
@@ -20,14 +20,14 @@ public class howPlayGUI extends JFrame {
         Jp.setLayout(new BorderLayout());
 
         Jl.setFont(Jl.getFont().deriveFont(30.0f));
-        Jl.setBounds(400, 200, 700, 250);
-//        Jl.setHorizontalAlignment(JLabel.CENTER);
+        Jl.setBounds(60, 100, 700, 250);
+//      Jl.setHorizontalAlignment(JLabel.CENTER);
 
 
         startBtn.setContentAreaFilled(false);
         startBtn.setFocusPainted(false);
 
-        startBtn.setBounds(660, 630, 170, 120);
+        startBtn.setBounds(330, 500, 170, 120);
         startBtn.setPreferredSize(new Dimension(170, 120));
 
 
