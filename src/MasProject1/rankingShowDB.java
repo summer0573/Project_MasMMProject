@@ -1,9 +1,6 @@
 package MasProject1;
 
-import java.awt.*;
 import java.sql.*;
-import java.util.List;
-import javax.swing.*;
 
 public class rankingShowDB {
     public rankingShowDB() throws SQLException {
@@ -18,9 +15,7 @@ public class rankingShowDB {
         stmt = con.createStatement();
         rs = stmt.executeQuery("SELECT * FROM ranking_table");
 
-        int num = 1;
         while (rs.next()) {
-            System.out.print(num++ + "등\t");
             System.out.print(rs.getString("name") + "\t");
             System.out.print(rs.getString("diff") + "\t");
             System.out.print(rs.getInt("score") + "\t");

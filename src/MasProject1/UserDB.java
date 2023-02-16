@@ -16,9 +16,10 @@ public class UserDB {
         String password = "@summer0573";
 
         //****임시 데이터
-        String name = "홍길동"; //플레이어 닉네임
-        String diff = "4단계"; //플레이어가 선택한 난이도
-        int score = 5; //플레이어가 문제를 맞춘 갯수
+        String name = "ddd"; //플레이어 닉네임
+        String diff = "3단계"; //플레이어가 선택한 난이도
+        int score = 1; //플레이어가 문제를 맞춘 갯수
+        ///
         
         scoreDateSG DSG = new scoreDateSG();
         DSG.setUserDT(String.valueOf(score));
@@ -45,30 +46,6 @@ public class UserDB {
         점수 화면에 띄우고
         시작창에 최신순으로 띄우기
         */
-
-        /*
-        int num=1;
-        try {
-//데이터베이스불러오기
-            Connection connection = DriverManager.getConnection(url, userName, password);
-            Statement stmt = connection.createStatement();
-            stmt.executeUpdate(" INSERT INTO user_scoer_tabel(user_name,user_scoer)  VALUES ('" + name + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-            ResultSet rs = stmt.executeQuery("SELECT * FROM user_scoer_tabel ORDER BY user_scoer DESC;");//데이터베이스에서 가져오는 큐리문
-            while(num<=10 && http://rs.next()){//rs 에는 불러온 테이블 내용이 배열 처럼 들어 있으므로 반복문을 이용하여 불러온다
-//num 은 등수 표시하기 위해 만든 거니까 무시해도 된다.
-                scoret+=" "+num++;
-                scoret+= "\t| "+rs.getString(1)+"\t| "+rs.getString(2)+"\n";
-            }
-
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
-        dialog.setScoreTest(scoret);
-        dialog.setVisible(true);
-    }
-        * */
-
-
 
     }
 

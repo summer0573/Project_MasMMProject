@@ -5,8 +5,8 @@ import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
 
-public class startGUI extends JFrame{
-//처음 시작 화면
+public class startGUI extends JFrame {
+    //처음 시작 화면
     public startGUI() {
         setTitle("masproject");
         setSize(1500, 850);
@@ -28,6 +28,10 @@ public class startGUI extends JFrame{
         howPlayBtn.setPreferredSize(new Dimension(170, 120));
         howPlayBtn.setBounds(750, 630, 170, 120);
 
+        JTextField textField = new JTextField();
+
+//        add(textField);
+        Jp.add(textField);
         add(startBtn);
         add(howPlayBtn);
         add(Jp);
@@ -39,8 +43,11 @@ public class startGUI extends JFrame{
         startBtn.addActionListener(new ActionListener() { //게임 시작 이벤트
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Frame();
-                setVisible(false);
+//                new Frame();
+//                setVisible(false);
+                String test = textField.getText();
+                System.out.println(test);
+
             }
         });
 
