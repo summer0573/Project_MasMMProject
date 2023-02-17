@@ -7,11 +7,12 @@ import javax.swing.*;
 
 public class startGUI extends JFrame {
 
-    JPanel JP;
-    JScrollPane JSP;
-    JLabel JL;
+    JPanel JP; //패널
+    JScrollPane JSP; //점수 출력 스크롤 패널
+    JLabel JL; //점수 라벨
 
-    JLabel Title_JL;
+    JLabel Title_JL; //제목 라벨
+    Font f = new Font("돋움", Font.PLAIN, 25);
 
     //처음 시작 화면
     public startGUI() throws SQLException {
@@ -24,6 +25,9 @@ public class startGUI extends JFrame {
 
         JButton startBtn = new JButton("게임 시작"); //시작 버튼
         JButton howPlayBtn = new JButton("게임 방법"); //게임 방법 안내 버튼
+
+        startBtn.setFont(f);
+        howPlayBtn.setFont(f);
 
         startBtn.setContentAreaFilled(false);
         startBtn.setFocusPainted(false);
@@ -38,7 +42,7 @@ public class startGUI extends JFrame {
         howPlayBtn.setBounds(440, 550, 170, 120);
 
         ////////////////////////////////////
-
+        //테이블 데이터 불러오기
         Connection con;
         Statement stmt;
         ResultSet rs;
@@ -46,15 +50,14 @@ public class startGUI extends JFrame {
         String userName = "root";
         String password = "@summer0573";
 
-
         con = DriverManager.getConnection(url, userName, password);
         stmt = con.createStatement();
-        rs = stmt.executeQuery("SELECT * FROM ranking_table");
-
+        rs = stmt.executeQuery("SELECT * FROM ranking_table ORDER BY number DESC;");
         String DBJL ="<html><body style='text-align:center;'>";
 
         while (rs.next()) {
 
+            //DBJL에 데이터들을 저장함
             DBJL +=
                     rs.getString("name") + " " +
                     rs.getString("diff") + " " +
@@ -69,9 +72,6 @@ public class startGUI extends JFrame {
 
         ////////////////////////////////////
 
-        Font f = new Font("돋움", Font.PLAIN, 15);
-
-
         JL = new JLabel(DBJL,JLabel.CENTER);
         JL.setFont(f);
         JL.setFont(JL.getFont().deriveFont(20.0f));
@@ -85,7 +85,6 @@ public class startGUI extends JFrame {
         JSP.setBounds(265, 200, 300, 300);
 
         ///////////////////////////////////////
-
 
         add(startBtn);
         add(howPlayBtn);

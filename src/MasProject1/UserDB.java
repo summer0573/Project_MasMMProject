@@ -4,7 +4,7 @@ import java.sql.*;
 import MasProject2.*;
 
 public class UserDB {
-
+//데이터 저장하기
     public String userScore;
 
     public UserDB() {
@@ -16,26 +16,26 @@ public class UserDB {
         String password = "@summer0573";
 
         //****임시 데이터
-        String name = "드디어"; //플레이어 닉네임
+        String name = "구준표"; //플레이어 닉네임
         String diff = "1단계"; //플레이어가 선택한 난이도
-        int score = 2; //플레이어가 문제를 맞춘 갯수
+        int score = 1; //플레이어가 문제를 맞춘 갯수
         ///
         
         scoreDateSG DSG = new scoreDateSG();
         DSG.setUserDT(String.valueOf(score));
         userScore = DSG.getUserDT();
 
-//        try {
-////데이터베이스불러오기
-//            Connection connection = DriverManager.getConnection(url, userName, password);
-//            Statement stmt = connection.createStatement();
-//
-//            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
-//
-//
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//        }
+        try {
+//데이터베이스불러오기
+            Connection connection = DriverManager.getConnection(url, userName, password);
+            Statement stmt = connection.createStatement();
+
+            stmt.executeUpdate(" INSERT INTO ranking_table(name, diff, score)  VALUES ('" + name + "', '" + diff + "', '" + score + "')");//테이블에 스코어를 추가 시키는 큐리문
+
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
 
         /*TRUNCATE
         jlabel로 점수 데이터 확인하기

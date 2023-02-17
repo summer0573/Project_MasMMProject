@@ -19,14 +19,17 @@ public class gameScoreGUI extends JFrame{
         System.out.println(userScoreData);
 
         JPanel Jp = new JPanel();
-        JLabel Jl = new JLabel("<html><body style='text-align:center;'>" +
+        JLabel JL = new JLabel("<html><body style='text-align:center;'>" +
                 userScoreData + "개를 맞추셨습니다!" +
                 "</body></html>");
 
-        Jl.setFont(Jl.getFont().deriveFont(30.0f));
-        Jl.setBounds(280, 200, 350, 250);
+        Font f = new Font("돋움", Font.PLAIN, 30);
 
-        add(Jl);
+        JL.setFont(f);
+        JL.setFont(JL.getFont().deriveFont(30.0f));
+        JL.setBounds(270, 190, 350, 250);
+
+        add(JL);
         add(Jp);
 
         setLocationRelativeTo(null);
