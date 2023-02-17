@@ -11,6 +11,8 @@ public class startGUI extends JFrame {
     JScrollPane JSP;
     JLabel JL;
 
+    JLabel Title_JL;
+
     //처음 시작 화면
     public startGUI() throws SQLException {
 
@@ -65,12 +67,21 @@ public class startGUI extends JFrame {
 
         DBJL += "</body></html>";
 
+        ////////////////////////////////////
+
+        Font f = new Font("돋움", Font.PLAIN, 15);
+
+
         JL = new JLabel(DBJL,JLabel.CENTER);
-        JSP = new JScrollPane(JL);
-
-
+        JL.setFont(f);
         JL.setFont(JL.getFont().deriveFont(20.0f));
         JL.setBounds(0, 0, 250, 300);
+
+        Title_JL = new JLabel("얼굴 맞히기 게임");
+        Title_JL.setFont(JL.getFont().deriveFont(50.0f));
+        Title_JL.setBounds(220, -100, 500, 400);
+
+        JSP = new JScrollPane(JL);
         JSP.setBounds(265, 200, 300, 300);
 
         ///////////////////////////////////////
@@ -78,6 +89,7 @@ public class startGUI extends JFrame {
 
         add(startBtn);
         add(howPlayBtn);
+        add(Title_JL);
         add(JSP);
         add(JP);
 
