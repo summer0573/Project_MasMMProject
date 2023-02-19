@@ -19,12 +19,11 @@ public class gameScoreGUI extends JFrame {
 //        UserDB RD = new UserDB();
 //        int userScoreData = RD.score;
 
-//        GameView GV = new GameView();
-//        int userScoreData = GV.score;
+        GameView GV = new GameView();
+        int userScoreData = GV.Fscore;
 
         final startGUI[] SG = new startGUI[1];
 
-        int userScoreData = 4;
 
         setTitle("masproject");
         setSize(840, 720);
@@ -34,7 +33,8 @@ public class gameScoreGUI extends JFrame {
 
         Jp = new JPanel();
         JL = new JLabel("<html><body style='text-align:center;'>" +
-                userScoreData + "개를 맞추셨습니다!" +
+                userScoreData +
+                "개를 맞추셨습니다!" +
                 "</body></html>");
 
         Font f = new Font("돋움", Font.PLAIN, 30);
@@ -69,7 +69,6 @@ public class gameScoreGUI extends JFrame {
                     throw new RuntimeException(ex);
                 }
                 setVisible(false);
-
             }
         });
     }

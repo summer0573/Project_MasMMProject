@@ -104,7 +104,6 @@ public class startGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 GV = new GameView();
                 setVisible(false);
-
             }
         });
 

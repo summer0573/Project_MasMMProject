@@ -22,9 +22,9 @@ public class GameView {
     JFrame difficultyFrame = new JFrame("게임 난이도 선택");
     JFrame GameFrame = new JFrame("게임 화면");
 
-    public int difficulty; // 게임 난이도 저장 변수
-    public String nickname; // 닉네임
-    public int score; // 점수 변수
+    static int difficulty; // 게임 난이도 저장 변수
+    static String nickname; // 닉네임
+    static int score; // 점수 변수
 
     JLabel scoreLbl = new JLabel(); // 점수 표시 라벨
     int ImgCnt = 1; // 문제(이미지) 카운트
@@ -36,7 +36,9 @@ public class GameView {
     JButton PassBtn = new JButton("패스"); // 패스 버튼
 
     //    JPanel totalPanel = new JPanel(null); //총점 화면
-    gameScoreGUI GSG;
+
+    static gameScoreGUI GSG;
+    static UserSetGet USG = new UserSetGet();
 
     JLabel totalLbl = new JLabel(); //총점 출력
 
@@ -126,11 +128,7 @@ public class GameView {
             if (ImgCnt > 6) {
                 stagePanel.setVisible(false);
 //                totalPanel.setVisible(true);
-                try {
-                    GSG = new gameScoreGUI();
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
+                dataGS();
             } else stageImg.setIcon(new ImageIcon("mas_images/stage" + difficulty + "_" + ImgCnt + ".jpg"));
         }
     };
@@ -227,21 +225,13 @@ public class GameView {
                             scoreLbl.setText(("현재 점수: " + score));
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         } else {
                             JOptionPane.showMessageDialog(null, "오답입니다");
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         }
                 }
@@ -343,21 +333,13 @@ public class GameView {
                             scoreLbl.setText(("현재 점수: " + score));
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         } else {
                             JOptionPane.showMessageDialog(null, "오답입니다");
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         }
                 }
@@ -457,21 +439,13 @@ public class GameView {
                             scoreLbl.setText(("현재 점수: " + score));
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         } else {
                             JOptionPane.showMessageDialog(null, "오답입니다");
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         }
                 }
@@ -571,21 +545,13 @@ public class GameView {
                             scoreLbl.setText(("현재 점수: " + score));
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         } else {
                             JOptionPane.showMessageDialog(null, "오답입니다");
                             stagePanel.setVisible(false);
 //                            totalPanel.setVisible(true);
-                            try {
-                                GSG = new gameScoreGUI();
-                            } catch (SQLException ex) {
-                                throw new RuntimeException(ex);
-                            }
+                            dataGS();
                             break;
                         }
                 }
@@ -650,7 +616,32 @@ public class GameView {
         GameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    public static String name;
+    public static int diff;
+    public static int Fscore;
+
+    public static void dataGS() {
+        USG.setName(nickname);
+        USG.setDiff(difficulty);
+        USG.setScore(score);
+
+        name = USG.getName();
+        diff = USG.getDiff();
+        Fscore = USG.getScore();
+        new UserDB();
+        userdbCall();
+    }
+
+    public static void userdbCall() {
+        try {
+            GSG = new gameScoreGUI();
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
     public static void main(String[] args) {
         new GameView();
+
     }
 }

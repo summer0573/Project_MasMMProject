@@ -5,6 +5,34 @@ import MasProject2.*;
 import MasProject3.*;
 
 public class UserDB {
+
+    public String name;
+    public int diff;
+    public int score;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getDiff() {
+        return diff;
+    }
+
+    public void setDiff(int diff) {
+        this.diff = diff;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 //데이터 저장하기
 
     public UserDB() {
@@ -12,10 +40,14 @@ public class UserDB {
         String userName = "root";
         String password = "@summer0573";
 
-        String name = "tlqkf"; //플레이어 닉네임
-        String diff = "단계"; //플레이어가 선택한 난이도
-        int score = 4; //플레이어가 문제를 맞춘 갯수
+        GameView GV = new GameView();
+        String name = GV.name;
+        String diff = GV.diff + "단계";
+        int score = GV.Fscore;
 
+        System.out.println(name);
+        System.out.println(diff);
+        System.out.println(score);
 
         try {
 //데이터베이스불러오기

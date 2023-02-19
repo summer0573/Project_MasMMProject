@@ -2,7 +2,7 @@ package MasProject3;
 
 public class UserSetGet {
 
-    public String name;
+    public static String name;
     public int diff;
     public int score;
 
