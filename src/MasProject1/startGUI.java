@@ -5,8 +5,10 @@ import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
 
-public class startGUI extends JFrame {
+import MasProject3.*;
 
+public class startGUI extends JFrame {
+    GameView GV;
     JPanel JP; //패널
     JScrollPane JSP; //점수 출력 스크롤 패널
     JLabel JL; //점수 라벨
@@ -40,6 +42,7 @@ public class startGUI extends JFrame {
 
         howPlayBtn.setPreferredSize(new Dimension(170, 120));
         howPlayBtn.setBounds(440, 550, 170, 120);
+
 
         ////////////////////////////////////
         //테이블 데이터 불러오기
@@ -99,7 +102,7 @@ public class startGUI extends JFrame {
         startBtn.addActionListener(new ActionListener() { //게임 시작 이벤트
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Frame();
+                GV = new GameView();
                 setVisible(false);
 
             }

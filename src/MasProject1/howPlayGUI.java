@@ -1,10 +1,13 @@
 package MasProject1;
 
+import MasProject3.GameView;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class howPlayGUI extends JFrame {
+    GameView GV;
 //게임 방법 설명 화면
     public howPlayGUI() {
         setTitle("masproject");
@@ -44,7 +47,7 @@ public class howPlayGUI extends JFrame {
         startBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Frame();
+                GV = new GameView();
                 setVisible(false);
             }
         });

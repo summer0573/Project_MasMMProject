@@ -2,28 +2,20 @@ package MasProject1;
 
 import java.sql.*;
 import MasProject2.*;
+import MasProject3.*;
 
 public class UserDB {
 //데이터 저장하기
-    public String userScore;
 
     public UserDB() {
-        test2 TT = new test2();
-        int DT = TT.T2;
-
         String url = "jdbc:mysql://localhost:3306/MasMMProject";
         String userName = "root";
         String password = "@summer0573";
 
-        //****임시 데이터
-        String name = "구준표"; //플레이어 닉네임
-        String diff = "1단계"; //플레이어가 선택한 난이도
-        int score = 1; //플레이어가 문제를 맞춘 갯수
-        ///
-        
-        scoreDateSG DSG = new scoreDateSG();
-        DSG.setUserDT(String.valueOf(score));
-        userScore = DSG.getUserDT();
+        String name = "tlqkf"; //플레이어 닉네임
+        String diff = "단계"; //플레이어가 선택한 난이도
+        int score = 4; //플레이어가 문제를 맞춘 갯수
+
 
         try {
 //데이터베이스불러오기

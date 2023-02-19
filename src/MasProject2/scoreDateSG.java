@@ -1,7 +1,5 @@
 package MasProject2;
 
-import MasProject1.test;
-
 public class scoreDateSG {
     public String userDT;
 
