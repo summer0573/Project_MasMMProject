@@ -92,6 +92,7 @@ public class GameView {
                     for (int j = 0; j < difficultyBtn.length; j++) {
                         if (difficultyBtn[j] == e.getSource()) {
                             difficulty = j + 1;
+                            score = 0;
                         }
                     }
                     difficultyPanel.setVisible(false);
@@ -130,6 +131,8 @@ public class GameView {
 //                totalPanel.setVisible(true);
                 dataGS();
             } else stageImg.setIcon(new ImageIcon("mas_images/stage" + difficulty + "_" + ImgCnt + ".jpg"));
+            InpAnswer.setText("");
+            InpAnswer.requestFocus();
         }
     };
 
@@ -235,6 +238,8 @@ public class GameView {
                             break;
                         }
                 }
+                InpAnswer.setText("");
+                InpAnswer.requestFocus();
             }
 
 
@@ -343,6 +348,8 @@ public class GameView {
                             break;
                         }
                 }
+                InpAnswer.setText("");
+                InpAnswer.requestFocus();
             }
         });
     }
@@ -449,6 +456,8 @@ public class GameView {
                             break;
                         }
                 }
+                InpAnswer.setText("");
+                InpAnswer.requestFocus();
             }
         });
     }
@@ -555,6 +564,8 @@ public class GameView {
                             break;
                         }
                 }
+                InpAnswer.setText("");
+                InpAnswer.requestFocus();
             }
         });
     }
