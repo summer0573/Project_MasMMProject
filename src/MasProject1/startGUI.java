@@ -21,7 +21,7 @@ public class startGUI extends JFrame {
 
         JP = new JPanel();
 
-        setTitle("masproject");
+        setTitle("인물퀴즈");
         setSize(840, 720);
         setBackground(Color.WHITE);
 
@@ -80,9 +80,9 @@ public class startGUI extends JFrame {
         JL.setFont(JL.getFont().deriveFont(20.0f));
         JL.setBounds(0, 0, 250, 300);
 
-        Title_JL = new JLabel("얼굴 맞히기 게임");
+        Title_JL = new JLabel("인물 퀴즈");
         Title_JL.setFont(JL.getFont().deriveFont(50.0f));
-        Title_JL.setBounds(220, -100, 500, 400);
+        Title_JL.setBounds(300, -100, 500, 400);
 
         JSP = new JScrollPane(JL);
         JSP.setBounds(265, 200, 300, 300);

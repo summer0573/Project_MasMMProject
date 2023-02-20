@@ -25,7 +25,7 @@ public class gameScoreGUI extends JFrame {
         final startGUI[] SG = new startGUI[1];
 
 
-        setTitle("masproject");
+        setTitle("최종 점수");
         setSize(840, 720);
         setBackground(Color.WHITE);
 

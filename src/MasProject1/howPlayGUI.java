@@ -10,7 +10,7 @@ public class howPlayGUI extends JFrame {
     GameView GV;
 //게임 방법 설명 화면
     public howPlayGUI() {
-        setTitle("masproject");
+        setTitle("게임 방법");
         setSize(840, 720);
         setBackground(Color.WHITE);
 
